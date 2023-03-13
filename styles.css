@@ -5,11 +5,11 @@
 	--code-bg: #2b3242;
 	--code-fg: #52ffda;
 	--comment: #ffffff59;
+	--reference: #bbbbbb;
 }
 * {
 	box-sizing: border-box;
 }
-
 html {
 	background-color: #000;
 	color: var(--blue-light);
@@ -43,13 +43,13 @@ html {
 	list-style: none;
 	padding-left: 0;
 }
+
 .nav-link {
 	color: var(--blue-light);
 }
 nav li:first-child {
 	border-top: 0 !important;
 }
-
 nav li:last-child {
 	padding-bottom: 0.5em;
 }
@@ -74,8 +74,6 @@ nav li:last-child {
 	font-weight: bolder;
 	color: var(--blue-dark);
 }
-
-
 
 code > pre, .one_line {
 	background-color: var(--code-bg);
@@ -110,13 +108,9 @@ dl > dd {
 	color: var(--comment);
 	font-style: italic;
 }
-
-#reference ul li a {color: #bbbbbb;}
-
-
-
-
-
+#reference ul li a {
+	color: var(--reference);
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -124,10 +118,8 @@ dl > dd {
 		scroll-behavior: smooth;
 	}
 }
+
 @media (max-width: 800px) {
-	html {
-		background-color: #000;
-	}
 	#navbar {
 		width: 96%;
 		margin: auto;
@@ -135,7 +127,6 @@ dl > dd {
 		left: 2%;
 		top: 0;
 		border: 4px groove var(--blue-dark);
-
 	}
 	#navbar > header {
 		font-size: 1.9em;
@@ -145,7 +136,6 @@ dl > dd {
 		margin-top: 0;
 		overflow-y: scroll;
 	}
-
 	#main-doc {
 		position: absolute;
 		top: 270px;
